@@ -67,6 +67,7 @@
 // NOTE: in UNIX you need to use -DNDEBUG preprocessor option to supress assert's!!!
 
 
+namespace maxflow {
 
 // captype: type of edge capacities (excluding t-links)
 // tcaptype: type of t-links (edges between nodes and terminals)
@@ -362,12 +363,10 @@ private:
 };
 
 
-
-
-
-
-
-
+typedef Graph<int,int,int> Graph_III;
+typedef Graph<short,int,int> Graph_SII;
+typedef Graph<float,float,float> Graph_FFF;
+typedef Graph<double,double,double> Graph_DDD;;
 
 
 
@@ -510,5 +509,8 @@ template <typename captype, typename tcaptype, typename flowtype>
 	i->is_marked = 1;
 }
 
+
+
+} // end namespace 
 
 #endif
