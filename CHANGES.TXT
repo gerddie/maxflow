@@ -1,3 +1,13 @@
+List of changes from version 3.03:
+
+- Add CMake build files
+- Add simple unit test as test-maxflow executable 
+- move some code around to put all graph implementation code into one file
+- make it compile to a shared library
+- provide the standard instanciations that were in "instances.inc" as typedefs
+  they are the ones that are provided by the shared library
+- silence a warning about assignment in "if"   
+
 List of changes from version 3.02:
 
 - put under GPL license

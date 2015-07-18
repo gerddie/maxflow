@@ -121,3 +121,6 @@ int main()
 
 
 ///////////////////////////////////////////////////
+
+Additional maintainance was done by Gert Wollny <gw.fossdev@gmail.com>. 
+See CHANGES.TXT for details.

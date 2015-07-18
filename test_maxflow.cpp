@@ -73,15 +73,15 @@ pair<int,int> test_1()
         
 	int flow = g.maxflow();
 
-        int result = 0; 
+        pair<int,int> result = make_pair(0, 3); 
         if (flow != 6) {
                 cerr << "test_1: Flow = " <<  flow << ", " << "expected 6\n";
-                ++result; 
+                ++result.first; 
         }
 
-        result += test_node(g, 0, Graph_III::SOURCE, "test_1");
-        result += test_node(g, 1, Graph_III::SINK,  "test_1"); 
-        return make_pair<int, int> (result, 3); 
+        result.first += test_node(g, 0, Graph_III::SOURCE, "test_1");
+        result.first += test_node(g, 1, Graph_III::SINK,  "test_1"); 
+        return result; 
 }
 
 
@@ -120,16 +120,16 @@ pair<int,int> test_2()
         
 	int flow = g.maxflow();
 
-        int result = 0; 
+        pair<int,int> result = make_pair(0, 3); 
         if (flow != 3) {
                 cerr << "test_2: Flow = " <<  flow << ", " << "expected 3\n";
-                ++result; 
+                ++result.first; 
         }
 
-        result += test_node(g, 0, Graph_III::SINK, "test_2");
-        result += test_node(g, 1, Graph_III::SINK, "test_2");
+        result.first += test_node(g, 0, Graph_III::SINK, "test_2");
+        result.first += test_node(g, 1, Graph_III::SINK, "test_2");
 
-        return make_pair<int, int> (result, 3); 
+        return result;  
 }
 
 
@@ -169,19 +169,20 @@ pair<int,int> test_3()
 	g.add_edge( 0, 1,    /* capacities */  2, 4 );
         g.add_edge( 1, 2,    /* capacities */  3, 5 );
         
-        	int flow = g.maxflow();
+        int flow = g.maxflow();
 
-        int result = 0; 
+        pair<int,int> result = make_pair(0,4); 
+                
         if (flow != 9) {
                 cerr << "test_2: Flow = " <<  flow << ", " << "expected 9\n";
-                ++result; 
+                ++result.first; 
         }
 
-        result += test_node(g, 0, Graph_III::SOURCE, "test_3");
-        result += test_node(g, 1, Graph_III::SINK, "test_3");
-        result += test_node(g, 2, Graph_III::SINK, "test_3");
+        result.first += test_node(g, 0, Graph_III::SOURCE, "test_3");
+        result.first += test_node(g, 1, Graph_III::SINK, "test_3");
+        result.first += test_node(g, 2, Graph_III::SINK, "test_3");
         
-        return make_pair<int, int> (result, 4); 
+        return result; 
 }
 
 pair<int,int>& operator += (pair<int,int>& lhs, const pair<int,int>& rhs)
