@@ -134,7 +134,7 @@ public:
 	//
 	// Occasionally there may be several minimum cuts. If a node can be assigned
 	// to both the source and the sink, then default_segm is returned.
-	termtype what_segment(node_id i, termtype default_segm = SOURCE);
+	termtype what_segment(node_id i, termtype default_segm = SOURCE) const;
 
 
 
@@ -482,7 +482,7 @@ template <typename captype, typename tcaptype, typename flowtype>
 
 
 template <typename captype, typename tcaptype, typename flowtype> 
-	inline typename Graph<captype,tcaptype,flowtype>::termtype Graph<captype,tcaptype,flowtype>::what_segment(node_id i, termtype default_segm)
+	inline typename Graph<captype,tcaptype,flowtype>::termtype Graph<captype,tcaptype,flowtype>::what_segment(node_id i, termtype default_segm) const 
 {
 	if (nodes[i].parent)
 	{
