@@ -6,7 +6,9 @@ List of changes from version 3.03:
 - make it compile to a shared library
 - provide the standard instanciations that were in "instances.inc" as typedefs
   they are the ones that are provided by the shared library
-- silence a warning about assignment in "if"   
+- silence a warning about assignment in "if"
+- put header files into a maxflow subdirectory to avoid possible conflicts with
+  other header files named "graph.h"
 
 List of changes from version 3.02:
 
