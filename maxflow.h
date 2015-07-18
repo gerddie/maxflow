@@ -1,4 +1,3 @@
-/* maxflow.cpp */
 /*
     Copyright Vladimir Kolmogorov (vnk@ist.ac.at), Yuri Boykov (yuri@csd.uwo.ca) 
 
@@ -19,15 +18,27 @@
 */
 
 
-#include <stdio.h>
+#ifndef maxflow_h
+#define maxflow_h
 
-#define MAXFLOW_INCLUDE_TEMPLATE_IMPLEMENTATION 1
-#include <maxflow.h>
+#include <maxflow/block.h>
+#include <maxflow/graph.h>
+
 
 namespace maxflow {
-template class Graph<int,int,int>;
-template class Graph<short,int,int>;
-template class Graph<float,float,float>;
-template class Graph<double,double,double>;
+	
+typedef Graph<int,int,int> Graph_III;
+typedef Graph<short,int,int> Graph_SII;
+typedef Graph<float,float,float> Graph_FFF;
+typedef Graph<double,double,double> Graph_DDD;
+
 }
 
+// define this if you want to instanciate a graph different from
+// the above
+#ifdef MAXFLOW_INCLUDE_TEMPLATE_IMPLEMENTATION
+#include <maxflow/graph.cpp>
+#endif 
+
+
+#endif 

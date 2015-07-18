@@ -20,7 +20,7 @@
 // Implement some simple tests for maxflow
 
 #include <iostream>
-#include "graph.h"
+#include <maxflow.h>
 
 using std::cerr;
 using std::pair;

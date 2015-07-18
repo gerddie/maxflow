@@ -363,12 +363,6 @@ private:
 };
 
 
-typedef Graph<int,int,int> Graph_III;
-typedef Graph<short,int,int> Graph_SII;
-typedef Graph<float,float,float> Graph_FFF;
-typedef Graph<double,double,double> Graph_DDD;;
-
-
 
 ///////////////////////////////////////
 // Implementation - inline functions //
