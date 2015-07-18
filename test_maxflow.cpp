@@ -1,6 +1,4 @@
 /*
-    Copyright Gert Wollny <gw.fossdev@gmail.com> 
-
     This file is part of MAXFLOW.
 
     MAXFLOW is free software: you can redistribute it and/or modify
@@ -19,7 +17,7 @@
 */
 
 
-// Implement a simple test of maxflow
+// Implement some simple tests for maxflow
 
 #include <iostream>
 #include "graph.h"
@@ -203,6 +201,6 @@ int main()
 
         cerr << failures.first << " of " << failures.second << " test failed\n"; 
 
-	return failures.first > 0 ? EXIT_SUCCESS : EXIT_FAILURE;
+	return failures.first > 0 ? EXIT_FAILURE : EXIT_SUCCESS;
 }
 
