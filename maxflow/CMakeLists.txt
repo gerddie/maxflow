@@ -14,8 +14,8 @@
 # along with MAXFLOW.  If not, see <http://www.gnu.org/licenses/>.
 
 SET(MAXFLOW_HEADER
-  block.h,
-  graph.h,
+  block.h
+  graph.h
   graph.cpp)
 
 INSTALL(FILES ${MAXFLOW_HEADER} DESTINATION ${INCLUDE_INSTALL_PATH})
