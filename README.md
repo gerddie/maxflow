@@ -3,7 +3,7 @@
 
 The original implementation can be found at
 
-   http://http://pub.ist.ac.at/~vnk/software.html
+     http://pub.ist.ac.at/~vnk/software.html
 
 and was implemented by 
 
@@ -29,7 +29,7 @@ the aforementioned paper in any resulting publication.
 
 ----------------------------------------------------------------------
 
-REUSING TREES:
+### Reusing trees 
 
 Starting with version 3.0, there is a also an option of reusing search
 trees from one maxflow computation to the next, as described in
@@ -44,9 +44,7 @@ the aforementioned paper in any resulting publication.
 Tested under windows, Visual C++ 6.0 compiler and unix (SunOS 5.8
 and RedHat Linux 7.0, GNU c++ compiler).
 
-##################################################################
-
-2. License & disclaimer.
+## License & disclaimer.
 
     Copyright 2001-2006 Vladimir Kolmogorov (vnk@ist.ac.at), Yuri Boykov (yuri@csd.uwo.ca).
 
@@ -66,26 +64,26 @@ and RedHat Linux 7.0, GNU c++ compiler).
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-##################################################################
 
-3. Example usage.
+### Example usage.
 
 This section shows how to use the library to compute
 a minimum cut on the following graph:
 
-		        SOURCE
-		       /       \
-		     1/         \2
-		     /      3    \
-		   node0 -----> node1
-		     |   <-----   |
-		     |      4     |
-		     \            /
-		     5\          /6
-		       \        /
-		          SINK
+         SOURCE
+        /       \
+      1/         \2
+      /      3    \
+    node0 -----> node1
+     |   <-----   |
+     |      4     |
+     \            /
+     5\          /6
+       \        /
+          SINK
 
-///////////////////////////////////////////////////
+
+----
 
     #include <stdio.h>
     #include "graph.h"
