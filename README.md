@@ -1,16 +1,17 @@
-###################################################################
-#                                                                 #
 #    MAXFLOW - software for computing mincut/maxflow in a graph   #
-#                        Version 3.03                             #
-#    http://http://pub.ist.ac.at/~vnk/software.html               #
-#                                                                 #
-#    Yuri Boykov (yuri@csd.uwo.ca)                                #
-#    Vladimir Kolmogorov (vnk@ist.ac.at)                          #
-#    2001-2006                                                    #
-#                                                                 #
-###################################################################
+#                        Version 3.04                             #
 
-1. Introduction.
+The original implementation can be found at
+
+   http://http://pub.ist.ac.at/~vnk/software.html
+
+and was implemented by 
+
+     Yuri Boykov (yuri@csd.uwo.ca)
+     Vladimir Kolmogorov (vnk@ist.ac.at) 
+     2001-2006
+
+## Introduction.
 
 This software library implements the maxflow algorithm described in
 
@@ -86,11 +87,11 @@ a minimum cut on the following graph:
 
 ///////////////////////////////////////////////////
 
-#include <stdio.h>
-#include "graph.h"
+    #include <stdio.h>
+    #include "graph.h"
 
-int main()
-{
+    int main()
+    {
 	typedef Graph<int,int,int> GraphType;
 	GraphType *g = new GraphType(/*estimated # of nodes*/ 2, /*estimated # of edges*/ 1); 
 
@@ -117,10 +118,10 @@ int main()
 	delete g;
 
 	return 0;
-}
+    }
 
 
-///////////////////////////////////////////////////
 
-Additional maintainance was done by Gert Wollny <gw.fossdev@gmail.com>. 
-See CHANGES.TXT for details.
+Additional maintainance is done by Gert Wollny <gw.fossdev@gmail.com> here
+in this github repository. 
+
