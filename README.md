@@ -15,10 +15,12 @@ and was implemented by
 
 This software library implements the maxflow algorithm described in
 
-	"An Experimental Comparison of Min-Cut/Max-Flow Algorithms for Energy Minimization in Vision."
+	"An Experimental Comparison of Min-Cut/Max-Flow Algorithms 
+         for Energy Minimization in Vision."
 	Yuri Boykov and Vladimir Kolmogorov.
 	In IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI), 
 	September 2004
+        http://dx.doi.org/10.1109/TPAMI.2004.60
 
 This algorithm was developed by Yuri Boykov and Vladimir Kolmogorov
 at Siemens Corporate Research. To make it available for public use,
@@ -42,7 +44,7 @@ If you use this option, you should cite
 the aforementioned paper in any resulting publication.
 
 Tested under windows, Visual C++ 6.0 compiler and unix (SunOS 5.8
-and RedHat Linux 7.0, GNU c++ compiler).
+and RedHat Linux 7.0, Gentoo Linux, GNU C++ compiler).
 
 ## License & disclaimer.
 
@@ -50,7 +52,8 @@ and RedHat Linux 7.0, GNU c++ compiler).
 
     This software is under the GPL license.
     If you require another license, you may consider using version 2.21
-    (which implements exactly the same algorithm, but does not have the option of reusing search trees).
+    (which implements exactly the same algorithm, but does not have
+     the option of reusing search trees).
 
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
     "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -86,7 +89,7 @@ a minimum cut on the following graph:
 ----
 
     #include <stdio.h>
-    #include "graph.h"
+    #include <maxflow/graph.h>
 
     int main()
     {
@@ -119,7 +122,8 @@ a minimum cut on the following graph:
     }
 
 
+### Additional notes
 
-Additional maintainance is done by Gert Wollny <gw.fossdev@gmail.com> here
+The build system, unit tests, and creation of a shared library was done by Gert Wollny <gw.fossdev@gmail.com> here
 in this github repository. 
 
