@@ -1,5 +1,6 @@
 /*
-    Copyright Vladimir Kolmogorov (vnk@ist.ac.at), Yuri Boykov (yuri@csd.uwo.ca) 
+    Copyright 2006-2015 
+    Vladimir Kolmogorov (vnk@ist.ac.at), Yuri Boykov (yuri@csd.uwo.ca) 
 
     This file is part of MAXFLOW.
 

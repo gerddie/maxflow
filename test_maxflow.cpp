@@ -1,4 +1,8 @@
 /*
+
+    Copyright 2006-2015, 
+    Vladimir Kolmogorov (vnk@ist.ac.at), Yuri Boykov (yuri@csd.uwo.ca)
+
     This file is part of MAXFLOW.
 
     MAXFLOW is free software: you can redistribute it and/or modify
