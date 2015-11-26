@@ -1,15 +1,23 @@
-sudo: required 
-dist: trusty 
-
+sudo: required
+dist: trusty
 before_script:
-  - mkdir build 
-  - cd build 
-  - cmake .. 
-
+- mkdir build
+- cd build
+- cmake ..
 script:
-  - make -j2 
-
+- make -j2
 after_success:
-  - make test
-  
-
+- make test
+env:
+  global:
+  - secure: 
+  - secure: MH8kt85y0qo2626Wy3lEILT0kTSSOwfMjQLYWxbpARfy4D1QVhGLGRubdcJNFcg6wQ+8IfdPgc0yXUpBnVnZZu2YQDfE3IXyPOFgBOHm8cxtBGSa68Z+6ZdbuqYUFUNXkbE/4hzjWUIW3j4IHEI5fN1PjMhpNkWuwHwRj4/L3Eh2AvEO4fU8Ov6jFngcnT8+8dQ6IrJ5KRmIsGTZsqaiAHaeUFbCfzefaCZKIZW2AtEbjf5QDSxmn//ctqFgS6ja/PANCDyMgvxDXpYqbiTwVJ0+JeeRxCYFoA/oh9q+Xro6ncIfn8mbsMpcVEA7PcphUKll7gHSsahb+9Cm5IsUa7msGcgbgRQU4mcVsRkcjTSypHN+qLxzEMmkSByKigJno90qzaMd+QUZkwHd9rKYGDuK/JIvSHiIHZVkgceC/FOEz30M5zgrFCcNblo4wK228sVzmKZZ28aM7EcFNVCYrrIw1G5HNsvLDgbEKSsdKVrNWhrn1QZagRsM+Drgsk7cpXWO0lFXCOeW3K4XLg90YGYno51Bnp/qEr2yNhfw/tKx6QrqBKfvnFU0QJTEcELnRtAOP9/QT9eXhBTZO8YSNNjiEjSWR3BzUBvZkHkxeViglCAIdZPvXrYXlbRlKC9iwYogVLDB/Yl85SW6jWcUijR4oc3ufS2TVDxqzu2r4Ss=
+addons:
+  coverity_scan:
+    project:
+      name: gerddie/maxflow
+      version: 3.0.4
+      description: Maxflow-library
+    notification_email: gw.fossdev@gmail.com
+    build_command: make
+    branch_pattern: coverity_scan
