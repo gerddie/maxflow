@@ -27,6 +27,9 @@ if(COMMAND cmake_policy)
 endif(COMMAND cmake_policy)
 
 
+option(BUILD_SHARED_LIBS "Build shared libraries (.dll/.so) instead of static ones (.lib/.a)" ON)
+
+
 SET(PACKAGE_NAME "maxflow")
 SET(MAJOR_VERSION 3)
 SET(MINOR_VERSION 0)
@@ -56,7 +59,7 @@ SET(INCLUDE_INSTALL_PATH ${CMAKE_INSTALL_INCLUDEDIR}/maxflow-${VERSION})
 ADD_SUBDIRECTORY(maxflow)
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
 
-ADD_LIBRARY(maxflow SHARED maxflow.cpp)
+ADD_LIBRARY(maxflow maxflow.cpp)
 SET_TARGET_PROPERTIES(maxflow PROPERTIES 
   SOVERSION ${LIBRARY_SOVERSION_INFO}
   VERSION ${LIBRARY_VERSION_INFO}
